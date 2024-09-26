@@ -140,6 +140,8 @@ struct hdf5_caml_mem {
 /* The current amount of memory allocated. */
 static size_t memory_allocated = 0;
 
+void caml_hdf5_raise_out_of_memory() __attribute__ ((noreturn));
+
 void caml_hdf5_raise_out_of_memory()
 {
   char msg[256];
